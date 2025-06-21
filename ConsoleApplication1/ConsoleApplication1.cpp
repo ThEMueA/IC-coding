@@ -54,45 +54,28 @@ public:
     }
 };
 
+int func(bool a) {
+    return 0;
+}
+
 int main() {
-    Time t;
-    t.setHours(0).setMinutes(0); // Chain setters
-    t.addMinutes(300000); // Add 5 hours (300 minutes)
+    
+    int  s = 1000 * 60 * 60;
+    int b = 1000 * 60 * 60 * 10;
+    int c = 1000 * 60 * 60 * 12;
 
-    // Correct way to output time
-    cout << t.getHours() << " hours and " << t.getMinutes
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    () << " minutes" << endl;
-    // Or using toString()
-    cout << "Time: " << t.toString() << endl;
+    for (;;)
+    {
+        func(1);
+        Sleep(s);
+        func(0);
+        Sleep(b);
 
+        func(1);
+        Sleep(s);
+        func(0);
+        Sleep(c);
+
+    }
     return 0;
 }
