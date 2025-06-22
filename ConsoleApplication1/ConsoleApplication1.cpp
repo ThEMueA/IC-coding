@@ -79,3 +79,26 @@ int main() {
     }
     return 0;
 }
+
+bool SuffisientVolts() {
+    return 0;
+}
+int mainLamp() {
+
+    int  s = 1000 * 60 * 60;
+
+    for (;;)
+    {
+     
+        Sleep(s);
+        if (!SuffisientVolts()) {
+            func(1);
+        }
+        else {
+            Sleep(s);
+            func(0);
+        }
+     
+    }
+    return 0;
+}
