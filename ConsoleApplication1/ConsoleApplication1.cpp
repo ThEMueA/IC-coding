@@ -5,7 +5,22 @@
 #include <string>
 #include <cstring>  
 #include <array>
+#include <thread>
+#include <vector>
 using namespace std;
+
+
+
+
+void worker(int thread_num,int dif) {
+    cout << "Thread " << thread_num << " is working...\n";
+
+    this_thread::sleep_for(chrono::milliseconds(500+dif));
+
+    cout << "Thread " << thread_num << " finished!\n";
+}
+
+
 
 
 class human {
@@ -75,7 +90,34 @@ int func(bool a) {
     return 0;
 }
 
+
+
+
+
+
 int main() {
+
+    const unsigned num_threads = thread::hardware_concurrency();
+
+    cout << "Starting " << num_threads << " threads (one per CPU core)\n";
+
+    vector<thread> threads;
+
+    // Launch threads
+    for (unsigned i = 0; i < num_threads; ++i) {
+        threads.emplace_back(worker, i,i*40);
+    }
+
+    // Wait for all threads to finish
+    for (auto& t : threads) {
+        t.join();
+    }
+
+    cout << "All threads completed!\n";
+    return 0;
+}
+
+int mainHyd() {
     
     int  s = 1000 * 60 * 60;
     int b = 1000 * 60 * 60 * 10;
