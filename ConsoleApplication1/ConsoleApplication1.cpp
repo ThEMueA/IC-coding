@@ -7,6 +7,21 @@
 #include <array>
 using namespace std;
 
+
+class human {
+private:
+    int egn;
+    char* name;
+
+public:
+    int GetEGN() { return egn; }
+    char* GetName() { return name;}
+
+    void setEgn(int e) { egn = e;}
+    void setName(char* c) { name = c;}
+    static void stats() {}
+};
+
 class Time {
 private:
     int hours;
@@ -54,6 +69,8 @@ public:
     }
 };
 
+
+
 int func(bool a) {
     return 0;
 }
@@ -83,6 +100,8 @@ int main() {
 bool SuffisientVolts() {
     return 0;
 }
+
+void charge(bool a){}
 int mainLamp() {
 
     int  s = 1000 * 60 * 60;
@@ -92,11 +111,13 @@ int mainLamp() {
      
         Sleep(s);
         if (!SuffisientVolts()) {
+            charge(0);
             func(1);
         }
         else {
             Sleep(s);
             func(0);
+            charge(1);
         }
      
     }
