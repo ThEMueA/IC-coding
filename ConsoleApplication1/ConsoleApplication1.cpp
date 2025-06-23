@@ -91,9 +91,20 @@ int func(bool a) {
 }
 
 
+//joped
+int maina() {
+    int car = 0;
+    if(car>1)
+    {
+        return 301;
+    }
+    return 0;
+}
 
-
-
+int shfaide() {
+    return 0;
+    //nqma da me pipneee
+}
 
 int main() {
 
