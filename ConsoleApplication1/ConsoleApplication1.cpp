@@ -101,8 +101,14 @@ int maina() {
     return 0;
 }
 
+static int Supersyan(bool a) {
+    return 1;
+}
+
 int shfaide() {
+   return Supersyan(true);
     return 0;
+    
     //nqma da me pipneee
 }
 
