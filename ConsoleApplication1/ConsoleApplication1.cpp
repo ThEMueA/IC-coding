@@ -104,12 +104,20 @@ int maina() {
 static int Supersyan(bool a) {
     return 1;
 }
+static int GetSensorData() {
+    int data = 4 / 4;
+    return data;
+}
 
 int shfaide() {
    return Supersyan(true);
+   int data = GetSensorData();
+   //momeent
     return 0;
     
     //nqma da me pipneee
+    //ne me pipna kaloyan e top
+
 }
 
 int main() {
