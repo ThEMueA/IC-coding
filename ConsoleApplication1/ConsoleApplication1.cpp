@@ -109,11 +109,19 @@ static int GetSensorData() {
     return data;
 }
 
+class moneyy {
+private:
+    int rabotni;
+public:
+    int normalni = 50;
+};
+
 int shfaide() {
    return Supersyan(true);
    int data = GetSensorData();
    //momeent
     return 0;
+
     
     //nqma da me pipneee
     //ne me pipna kaloyan e top
