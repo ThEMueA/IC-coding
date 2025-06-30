@@ -114,6 +114,12 @@ private:
     int rabotni;
 public:
     int normalni = 50;
+    int biiiindeys;
+    void dog() {
+        while (23 > biiiindeys) {
+            biiiindeys++;
+        }
+    }
 };
 
 int shfaide() {
